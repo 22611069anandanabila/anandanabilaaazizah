@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+</head>
+<body>
+    <h2>Prediction History</h2>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Precipitation</th>
+            <th>Max Temperature</th>
+            <th>Min Temperature</th>
+            <th>Wind Speed</th>
+            <th>Weather</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row['date'] }}</td>
+            <td>{{ row['precipitation'] }}</td>
+            <td>{{ row['temp_max'] }}</td>
+            <td>{{ row['temp_min'] }}</td>
+            <td>{{ row['wind'] }}</td>
+            <td>{{ row['weather'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>

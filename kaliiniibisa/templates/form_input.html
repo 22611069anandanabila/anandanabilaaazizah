@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Weather Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Input Weather Data</h2>
+    <form action="/predict" method="post">
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="precipitation">Precipitation:</label><br>
+        <input type="number" id="precipitation" name="precipitation" step="0.01" required><br><br>
+        
+        <label for="temp_max">Max Temperature:</label><br>
+        <input type="number" id="temp_max" name="temp_max" step="0.1" required><br><br>
+        
+        <label for="temp_min">Min Temperature:</label><br>
+        <input type="number" id="temp_min" name="temp_min" step="0.1" required><br><br>
+        
+        <label for="wind">Wind Speed:</label><br>
+        <input type="number" id="wind" name="wind" step="0.1" required><br><br>
+        
+        <label for="weather">Weather:</label><br>
+        <input type="text" id="weather" name="weather" required><br><br>
+        
+        <input type="submit" value="Submit Weather Data">
+    </form>
+</body>
+</html>
